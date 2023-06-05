@@ -18,7 +18,7 @@ function Product() {
 
     async function getProduct() {
         try {
-            const res = await axios.get('https://api.vuahanghieu.com/service/category/giay/products');
+            const res = await axios.get('http://api.vuahanghieu.com/service/category/giay/products');
             const listGiay = res.data;
 
             return setListProduct(listGiay.products.data);
