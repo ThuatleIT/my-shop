@@ -11,7 +11,7 @@ function Detail({ productId }) {
     async function getInfoProduct() {
         try {
             const res = await axios.get(
-                `http://api.vuahanghieu.com/product?filters=code=h0${productId},status={active;achot;pending;order},not_for_sale=0&embeds=gallery,shipping_new,warranty_new,product_n_category,manufacturers&metric=first&service_token=tuPdWKrMRY`,
+                `https://api.vuahanghieu.com/product?filters=code=h0${productId},status={active;achot;pending;order},not_for_sale=0&embeds=gallery,shipping_new,warranty_new,product_n_category,manufacturers&metric=first&service_token=tuPdWKrMRY`,
             );
             const info = res.data;
             return setInfoProduct(info.result);
