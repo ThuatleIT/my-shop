@@ -39,5 +39,5 @@ function App() {
         </Router>
     );
 }
-App.use(cors());
+
 export default App;
