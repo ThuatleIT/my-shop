@@ -1,0 +1,11 @@
+.slide {
+    position: relative;
+    margin-top: 100px;
+}
+//mobile layout
+@media screen and (max-width: 1024px) {
+    .slide {
+        position: relative;
+        margin-top: auto;
+    }
+}

@@ -1,0 +1,312 @@
+//Menu
+.title {
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    color: #262626;
+    padding-top: 10px;
+
+    height: 50px;
+    &:hover {
+        color: #262626;
+    }
+}
+.menu {
+    z-index: 999;
+    position: fixed;
+    top: 0;
+    height: auto;
+    background-color: white;
+    width: 100%;
+    text-align: center;
+    li {
+        display: inline-block;
+        padding: 0;
+        margin-left: 4px;
+    }
+}
+.inner-menu {
+    margin-top: 10px;
+    a {
+        display: block;
+        position: relative;
+        text-transform: uppercase;
+        font-weight: bold;
+        padding: 9px 25px;
+        font-size: 12px;
+        letter-spacing: 1.3px;
+        text-decoration: none;
+        color: #262626;
+    }
+}
+.menu-item {
+    &:hover {
+        color: orangered;
+        border-bottom: 3px solid orangered;
+    }
+}
+.menu__sub {
+    z-index: 999;
+    position: absolute;
+    top: auto;
+    left: 0;
+    width: 100%;
+    height: auto;
+    background-color: #fff;
+    border-top: 1px solid #f0f0f0;
+    text-align: center;
+    -webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.01);
+    -moz-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.01);
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.01);
+    display: none;
+    ul {
+        margin: 20px 2% 20px;
+        width: 50%;
+        display: inline-block;
+        text-align: left;
+    }
+
+    li {
+        display: inline-block;
+        white-space: nowrap;
+        padding: 10px 0;
+        font-weight: bold;
+        font-size: 13px;
+        margin: 0;
+        width: 32%;
+        text-align: center;
+
+        :hover {
+            color: orangered;
+            cursor: pointer;
+        }
+    }
+    a {
+        padding: 0;
+        text-transform: capitalize;
+        font-size: 12px;
+        color: #262626;
+        display: block;
+    }
+}
+.adidas:hover .menu__sub {
+    display: block;
+}
+
+.nike:hover .menu__sub {
+    display: block;
+}
+
+.menu-right {
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    display: flex;
+    width: 200px;
+    z-index: 999;
+
+    .icon {
+        cursor: pointer;
+        margin: 0 20px;
+        font-size: 20px;
+        color: #bfbfbf;
+
+        &:hover {
+            color: #262626;
+        }
+    }
+}
+.user {
+    position: relative;
+
+    .dropdown__inner {
+        display: none;
+        position: absolute;
+        width: 180px;
+        right: 0;
+        top: 30px;
+        background: #fff;
+        box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.5);
+        font-size: 14px;
+        font-weight: bold;
+        text-transform: capitalize;
+        text-align: center;
+
+        ul {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+        li {
+            display: block;
+            padding: 10px 0;
+            border-bottom: 1px solid #efeaea;
+
+            .link {
+                color: #3c3c3c;
+                font-weight: bold;
+                text-decoration: none;
+
+                &:hover {
+                    color: #337ab7;
+                }
+            }
+        }
+    }
+    .active {
+        display: block;
+    }
+}
+//Search
+
+.searchPro {
+    position: fixed;
+    top: 0;
+    z-index: 99;
+    right: 0;
+    width: 393px;
+    height: 100%;
+    padding: 90px 15px 0;
+    overflow-y: scroll;
+    background-color: #fff;
+    display: none;
+    .icon-right {
+        text-align: right;
+        margin-bottom: 20px;
+        margin-top: 5px;
+    }
+    .close {
+        padding: 5px;
+        right: 0;
+        font-size: 20px;
+
+        &:hover {
+            cursor: pointer;
+            color: #337ab7;
+        }
+    }
+    .search {
+        display: flex;
+        border-bottom: 2px solid #b0b0b0;
+        input {
+            padding: 10px 0;
+            height: 32px;
+            font-size: 16px;
+            font-weight: 600;
+            width: 100%;
+            border: none;
+            outline: none;
+        }
+        .enter {
+            border: none;
+            background: #fff;
+            font-size: 20px;
+        }
+    }
+}
+
+/// sytle Mobide
+
+.menu-mobile {
+    width: 100%;
+    height: 60px;
+
+    .menu-mobile-icon {
+        position: absolute;
+        left: 20px;
+        top: 10px;
+        font-size: 20px;
+        cursor: pointer;
+
+        &:hover {
+            color: #337ab7;
+        }
+    }
+}
+
+.nav__mobile {
+    z-index: 101;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 280px;
+    max-width: 100%;
+    background: white;
+    transition: transform linear 0.2s;
+    font-weight: 600;
+    overflow: scroll;
+    display: none;
+
+    .nav__mobile-close {
+        text-align: right;
+        font-size: 20px;
+        padding: 10px;
+        cursor: pointer;
+
+        &:hover {
+            color: #337ab7;
+        }
+    }
+
+    .nav__mobile-search {
+        width: 90%;
+        display: flex;
+        margin: 10px;
+        border: 1px solid #b0b0b0;
+        height: 25px;
+        border-radius: 4px;
+
+        input {
+            height: auto;
+            width: 100%;
+            border: none;
+            outline: none;
+            margin-left: 10px;
+        }
+    }
+    .nav__mobile-list-icon i {
+        padding: 5px;
+    }
+    .nav__mobile-list {
+        margin-top: 24px;
+    }
+    .nav__mobile-link {
+        text-decoration: none;
+        color: #333;
+        display: block;
+        padding: 8px 25px;
+        text-align: left;
+        border-bottom: 1px solid #f0f0f0;
+        font-size: 14px;
+
+        .nav__mobile-link-icon {
+            font-size: 16px;
+            float: right;
+        }
+    }
+    .nav__mobile-link-list {
+        text-align: left;
+        padding: 0 40px;
+
+        li {
+            padding: 8px;
+            list-style-type: none;
+            border-bottom: 1px solid #f0f0f0;
+            font-size: 10px;
+        }
+    }
+}
+.modal__mobile {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-color: #333;
+    opacity: 0.47;
+    z-index: 100;
+    display: none;
+}
+
+.active {
+    display: block;
+}
