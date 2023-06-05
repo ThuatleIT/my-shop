@@ -1,7 +1,7 @@
 const rourtes = {
-    home: '/',
+    home: '/*',
     infoproduct: `/giay/:productId/:slug`,
-    nomatch: '/*',
+    nomatch: '/abc',
     login: '/login',
     register: '/register',
 };
