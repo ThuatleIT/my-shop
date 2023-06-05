@@ -1,5 +1,6 @@
 {
     "name": "my-shop",
+    "proxy": "https://api.vuahanghieu.com/",
     "version": "0.1.0",
     "homepage": "https://ThuatleIT.github.io/my-shop/",
     "private": true,

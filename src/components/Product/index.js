@@ -18,9 +18,10 @@ function Product() {
 
     async function getProduct() {
         try {
-            const res = await axios.get('https://api.vuahanghieu.com/service/category/giay/products');
+            const res = await axios.get(
+                'https://cors-anywhere.herokuapp.com/https://api.vuahanghieu.com/service/category/giay/products',
+            );
             const listGiay = res.data;
-
             return setListProduct(listGiay.products.data);
         } catch (error) {
             console.log(error);
